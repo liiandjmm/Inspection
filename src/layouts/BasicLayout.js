@@ -10,6 +10,7 @@ import Footer from './Footer';
 import Header from './Header';
 import Context from './MenuContext';
 import SiderMenu from '@/components/SiderMenu';
+import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import getPageTitle from '@/utils/getPageTitle';
 import styles from './BasicLayout.less';
 
@@ -135,6 +136,7 @@ class BasicLayout extends React.Component {
             isMobile={isMobile}
             {...this.props}
           />
+          <PageHeaderWrapper className={styles.breadcrumb} />
           <Content className={styles.content} style={contentStyle}>
             {children}
           </Content>

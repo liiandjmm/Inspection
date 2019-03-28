@@ -13,7 +13,7 @@ import {
   Icon,
   Tooltip,
 } from 'antd';
-import PageHeaderWrapper from '@/components/PageHeaderWrapper';
+// import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import styles from './style.less';
 
 const FormItem = Form.Item;
@@ -65,10 +65,7 @@ class BasicForms extends PureComponent {
     };
 
     return (
-      <PageHeaderWrapper
-        title={<FormattedMessage id="app.forms.basic.title" />}
-        content={<FormattedMessage id="app.forms.basic.description" />}
-      >
+      <div>
         <Card bordered={false}>
           <Form onSubmit={this.handleSubmit} hideRequiredMark style={{ marginTop: 8 }}>
             <FormItem {...formItemLayout} label={<FormattedMessage id="form.title.label" />}>
@@ -239,7 +236,7 @@ class BasicForms extends PureComponent {
             </FormItem>
           </Form>
         </Card>
-      </PageHeaderWrapper>
+      </div>
     );
   }
 }
